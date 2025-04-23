@@ -42,6 +42,8 @@ Here are several ways to check or use PNW dataset quick.
    
   A jupyter notebook is available to load and plot PNW dataset at [here](./notebooks/inspect_pnw_dataset.ipynb). Download and run it on a local machine to enable the interactive plotting (e.g., zoom in/out for checking the picks). You would need to download the full dataset to the local.
 
+  Another notebook is available [here](./notebooks/curated_pnw_dataset_seisbench.ipynb) on how to access dataset with SeisBench APIs.
+
 2. Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17Qu54ZI_HxJjIgLgo9K18-vwpXWoIeYM?usp=sharing)
 
   If you are more familiar with Google Colab, go to the link above. Note that interactive plotting is not available on Colab.
