@@ -1,14 +1,14 @@
 # Pacific Northwest Curated Seismic Dataset
 [![DOI](https://zenodo.org/badge/470042054.svg)](https://zenodo.org/badge/latestdoi/470042054) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-## A curated dataset for a wide range of sources from the Pacific Northwest.
+## A curated dataset for a wide range of sources from the Pacific Northwest
 
 ![map](./figures/README_overview.png)
 
 ## Overview
-Each dataset has two files: waveform and metadata. All follow the structure of [seisbench format](https://seisbench.readthedocs.io/en/latest/). See [here](https://seisbench.readthedocs.io/en/latest/pages/data_format.html) to learn more about the  file structure. Download using the link below. Note that you may access the data directly from Google Colab. See `Google Colab` section below.
+Each dataset is made by two files: waveform (in HDF5 format) and metadata (in CSV format). All follow the structure of [seisbench format](https://seisbench.readthedocs.io/en/latest/). See [here](https://seisbench.readthedocs.io/en/latest/pages/data_format.html) to learn more about the  file structure.
 
 ## Datasets
-We are hosting two copies of the dataset: one on Google Drive, another on UW ESS server. Choose the one that gives you the best download performance. All datasets are also available through [SeisBench](https://github.com/seisbench/seisbench).
+We are hosting two copies of the dataset: one on Google Drive, another on UW-ESS server. All datasets are also available through [SeisBench](https://seisbench.readthedocs.io/en/latest/pages/benchmark_datasets.html#pnw).
 
 ### 1. ComCat Events
 - EH, BH, and HH channel (velocity)
@@ -34,25 +34,28 @@ We are hosting two copies of the dataset: one on Google Drive, another on UW ESS
 ### 5. ML-enhanced catalog
   - CSV (~93 MB): [[GDrive](https://drive.google.com/file/d/16qUT_3-duVuKwfmPmvtH5EifL4eeyRvv/view?usp=sharing)] 
 
-
-## A quick tour to dataset
-Here are several ways to check or use PNW dataset quick.
+## Access
+### Quick tour to the dataset
+Here are several ways to use the PNW dataset.
 
 1. Jupyter Notebook
    
-  A jupyter notebook is available to load and plot PNW dataset at [here](./notebooks/inspect_pnw_dataset.ipynb). Download and run it on a local machine to enable the interactive plotting (e.g., zoom in/out for checking the picks). You would need to download the full dataset to the local.
+  A jupyter notebook is available to load and plot PNW dataset at [here](./notebooks/inspect_pnw_dataset.ipynb). Download and run it on a local machine to enable the interactive plotting (e.g., zoom in/out for checking the picks).
 
-  Another notebook is available [here](./notebooks/curated_pnw_dataset_seisbench.ipynb) on how to access dataset with SeisBench APIs.
+2. A notebook is available [here](./notebooks/curated_pnw_dataset_seisbench.ipynb) on accessing the dataset with SeisBench APIs.
 
-2. Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17Qu54ZI_HxJjIgLgo9K18-vwpXWoIeYM?usp=sharing)
+3. Google Colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17Qu54ZI_HxJjIgLgo9K18-vwpXWoIeYM?usp=sharing)
 
   If you are more familiar with Google Colab, go to the link above. Note that interactive plotting is not available on Colab.
 
-3. A mini version of the dataset, which contains 500 earthquake streams, 500 explosion streams, 500 surface event streams, 126 sonic boom streams, and 94 thunder quake streams.
+### Demo sets
+1. A micro version of the dataset, which contains 10 earthquake streams, 10 explosion streams, 10 sonic boom streams, 10 thunder streams, and 10 surface event streams. See [data/microPNW](https://github.com/niyiyu/PNW-ML/tree/main/data/microPNW).
+   
+2. A mini version of the dataset, which contains 500 earthquake streams, 500 explosion streams, 500 surface event streams, 126 sonic boom streams, and 94 thunder quake streams.
   - waveform (640 MB): [[Google Drive](https://drive.google.com/file/d/1Yq6n8R0sb338OaT0KTwW2XFDb9x_LG6g/view?usp=share_link)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/miniPNW_waveforms.hdf5)]
   - metadata (424 KB): [[Google Drive](https://drive.google.com/file/d/1Y0nK6ObBVABuoTopaWRNg2lPqjQsXa7e/view?usp=share_link)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/miniPNW_metadata.csv)]
 
-4. A meso version with 10% of the full ComCat dataset.
+3. A meso version with 10% of the full ComCat dataset (only earthquake + explosion).
   - waveform (6.3 GB): [[Google Drive](https://drive.google.com/file/d/1SrbiQpBpU6mPq5Un_lJpPcfBekwczLzp/view?usp=share_link)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/mesoPNW_waveforms.hdf5)]
   - metadata (4.7 MB): [[Google Drive](https://drive.google.com/file/d/1HK2AuWPQj3dCdKShYcJ7a5E577XASrab/view?usp=share_link)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/mesoPNW_metadata.csv)]
 
@@ -97,20 +100,21 @@ Ni, Y., Hutko, A., Skene, F., Denolle, M., Malone, S., Bodin, P., Hartog, R., & 
 BiBTex:
 ```bibtex
 @article{ni2023pnw, 
-  title   = {Curated Pacific Northwest AI-ready Seismic Dataset}, 
-  volume  = {2}, 
-  url     = {https://seismica.library.mcgill.ca/article/view/368}, 
-  number  = {1}, 
-  journal = {Seismica}, 
-  author  = {Ni, Yiyu and Hutko, Alexander and Skene, Francesca and Denolle, Marine and Malone, Stephen and Bodin, Paul and Hartog, Renate and Wright, Amy}, 
-  year    = {2023}, 
-  month   = {May},
-  doi     = {10.26443/seismica.v2i1.368}, 
+  title={Curated Pacific Northwest AI-ready Seismic Dataset}, 
+  volume={2}, 
+  url={https://seismica.library.mcgill.ca/article/view/368}, 
+  number={1}, 
+  journal={Seismica}, 
+  author={Ni, Yiyu and Hutko, Alexander and Skene, Francesca and Denolle, Marine and Malone, Stephen and Bodin, Paul and Hartog, Renate and Wright, Amy}, 
+  year={2023}, 
+  month={05},
+  doi={10.26443/seismica.v2i1.368}
 }
 ```
 
-## Known issue
-* [Agu 25, 2023] Very few events (~15) in the ComCat dataset may have inconsistent `event_type_pnsn_label` and `event_type`. This issue comes from the outdated ComCat event metadata. Please prioritize PNSN label when such inconsistent occurs.
+## Known issues
+* August 2023: Very few events (~15) in the ComCat dataset may have inconsistent `event_type_pnsn_label` and `event_type`. This issue comes from the outdated ComCat event metadata. Please prioritize PNSN label when such inconsistent occurs.
+* June 2025: The `trace_start_time` field in the exotic metadata was delayed by 50 seconds. The metadata has now been corrected for all affected datasets.
 
 ## Report bugs
-If you find anything wrong with this dataset, please create an Issue at https://github.com/niyiyu/PNW-ML/issues or send me an email (niyiyu@uw.edu)
+If you find any issue in the dataset, please report through [GitHub Issue](https://github.com/niyiyu/PNW-ML/issues) or [email](mailto:niyiyu@uw.edu). 

@@ -138,7 +138,7 @@ for idx, i in df2[df2['event_type'] == etype].iterrows():
                 trace_name = f'bucket%d$%d,:3,:{length}' % (ibucket, len(data[ibucket]) - 1)
                 meta = meta.append({
                     "event_id": event_id, "trace_sampling_rate_hz": 100,
-                    "trace_start_time": str(starttime-10),
+                    "trace_start_time": str(starttime-60),
                     "event_type": event_type, "trace_name": trace_name,
                     "station_network_code": net,"station_code": sta,
                     "station_location_code": loc, "trace_channel": cha,
