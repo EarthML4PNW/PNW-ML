@@ -5,7 +5,7 @@
 ![map](./figures/README_overview.png)
 
 ## Overview
-Each dataset is made by two files: waveform (in HDF5 format) and metadata (in CSV format). All follow the structure of [seisbench format](https://seisbench.readthedocs.io/en/latest/). See [here](https://seisbench.readthedocs.io/en/latest/pages/data_format.html) to learn more about the  file structure.
+Each dataset is made by two files: waveform (in HDF5 format) and metadata (in CSV format). All follow the structure of [seisbench format](https://seisbench.readthedocs.io/en/latest/). See [here](https://seisbench.readthedocs.io/en/latest/pages/data_format.html) to learn more about the file structure.
 
 ## Datasets
 We are hosting two copies of the dataset: one on Google Drive, another on UW-ESS server. All datasets are also available through [SeisBench](https://seisbench.readthedocs.io/en/latest/pages/benchmark_datasets.html#pnw).
@@ -113,8 +113,8 @@ BiBTex:
 ```
 
 ## Known issues
-* August 2023: Very few events (~15) in the ComCat dataset may have inconsistent `event_type_pnsn_label` and `event_type`. This issue comes from the outdated ComCat event metadata. Please prioritize PNSN label when such inconsistent occurs.
-* June 2025: The `trace_start_time` field in the exotic metadata was delayed by 50 seconds. The metadata has now been corrected for all affected datasets.
+* [August 2023] Very few events (~15) in the ComCat dataset may have inconsistent `event_type_pnsn_label` and `event_type`. This issue comes from the outdated ComCat event metadata. Please prioritize PNSN label when such inconsistent occurs.
+* [June 2025] The `trace_start_time` field in the exotic metadata was delayed by 50 seconds. The metadata has now been corrected for all affected files.
 
 ## Report bugs
-If you find any issue in the dataset, please report through [GitHub Issue](https://github.com/niyiyu/PNW-ML/issues) or [email](mailto:niyiyu@uw.edu). 
+If you find any issue in the dataset, please report through [GitHub Issue](https://github.com/niyiyu/PNW-ML/issues) or [Email](mailto:niyiyu@uw.edu). 
