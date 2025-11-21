@@ -13,7 +13,7 @@ We are hosting two copies of the dataset: one on Google Drive, another on UW-ESS
 ### 1. ComCat Events
 - EH, BH, and HH channel (velocity)
   - waveform (62.7 GB): [[GDrive](https://drive.google.com/file/d/10UCLyJSRibvhon9CuUTfns3fObNFKDer/view?usp=sharing)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/comcat_waveforms.hdf5)]
-  - metadata (50.4 MB): [[GDrive](https://drive.google.com/file/d/1bKDITx8KiDGZUaUoWQSZilpo7GhdWxKv/view?usp=sharing)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/comcat_metadata.csv)]
+  - metadata (47.7 MB): [[GDrive](https://drive.google.com/file/d/1bKDITx8KiDGZUaUoWQSZilpo7GhdWxKv/view?usp=sharing)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/comcat_metadata.csv)]
 
 - EN (accelerometer)
   - waveform (2.1 GB): [[GDrive](https://drive.google.com/file/d/1I16psU3YJ7CFFNWZiaAGPlw1M3BmvuT8/view?usp=sharing)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/accelerometer_waveforms.hdf5)]
@@ -21,7 +21,7 @@ We are hosting two copies of the dataset: one on Google Drive, another on UW-ESS
 
 ### 2. Noise Waveform (EH, BH, and HH)
   - waveform (~18 GB): [[GDrive](https://drive.google.com/file/d/1Z55WTcoyy-bR-WwWbedlZJrSo6tkRLlJ/view?usp=sharing)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/noise_waveforms.hdf5)]
-  - metadata (4.9 MB): [[GDrive](https://drive.google.com/file/d/1Ou5AKRczEqnNRsSEUSafIRlGcXTvLLUW/view?usp=sharing)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/noise_metadata.csv)]
+  - metadata (4.8 MB): [[GDrive](https://drive.google.com/file/d/1Ou5AKRczEqnNRsSEUSafIRlGcXTvLLUW/view?usp=sharing)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/noise_metadata.csv)]
   
 ### 3. Exotic Events (EH, BH, and HH)
   - waveform (3.9 GB): [[GDrive](https://drive.google.com/file/d/1pxGQnLnAwXf9Zhc8xfh1HXEOsXjga2sG/view?usp=sharing)] | [[UW-ESS](https://dasway.ess.washington.edu/shared/niyiyu/PNW-ML/exotic_waveforms.hdf5)]
@@ -112,9 +112,10 @@ BiBTex:
 }
 ```
 
-## Known issues
+## Known issues and updates
 * [August 2023] Very few events (~15) in the ComCat dataset may have inconsistent `event_type_pnsn_label` and `event_type`. This issue comes from the outdated ComCat event metadata. Please prioritize PNSN label when such inconsistent occurs.
 * [June 2025] The `trace_start_time` field in the exotic metadata was delayed by 50 seconds. The metadata has now been corrected for all affected files.
+* [November 2025] 4970 (~2.7%) and 445 (~0.8%) data samples are removed from the comcat and noise dataset, respectively. These samples contain one or more undocumented events (see [Suarez and Beroza (2025)](https://arxiv.org/abs/2511.09805) for more information). Note that these smaples are only removed in the metadata (csv indexing file).
 
 ## Report bugs
 If you find any issue in the dataset, please report through [GitHub Issue](https://github.com/niyiyu/PNW-ML/issues) or [Email](mailto:niyiyu@uw.edu). 
